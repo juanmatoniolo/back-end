@@ -105,14 +105,6 @@ app.delete("/delete/:id", (req, res) => {
 });
 
 
-
 app.get("/", (req, res) => {
-	db.query("SELECT * FROM restob", (err, result) => {
-		if (err) {
-			console.log(err);
-			res.status(500).send("Error en el servidor");
-		} else {
-			res.send(result);
-		}
-	});
+	res.send("Conectado y funcionando");
 });
